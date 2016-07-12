@@ -54,6 +54,10 @@
   </developers>
   
   <dependencies>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xmldsig</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -98,7 +102,7 @@
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
           <schemaIncludes>
-            <include>xmldsig1-schema.xsd</include>
+            <include>xmldsig11-schema.xsd</include>
           </schemaIncludes>
           <extension>true</extension>
           <args>
@@ -116,6 +120,12 @@
             <arg>-Xph-csu</arg>
             <arg>-Xph-cloneable</arg>
           </args>
+          <episodes>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xmldsig</artifactId>
+            </episode>
+          </episodes>
         </configuration>
         <dependencies>
           <dependency>
@@ -124,6 +134,25 @@
             <version>2.2.11.7</version>
           </dependency>
         </dependencies>
+      </plugin>
+      <!-- Delete the directory with only ObjectFactory 
+           Source: http://stackoverflow.com/questions/32635137
+      -->
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <delete dir="${basedir}/target/generated-sources/xjc/com/helger/xsds/xmldsig/" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

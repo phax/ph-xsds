@@ -22,11 +22,6 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
   <globalBindings fixedAttributeAsConstantProperty="true" typesafeEnumMaxMembers="32000" />
-  <bindings schemaLocation="../resources/schemas/xmldsig-core-schema.xsd" node="/xs:schema">
-    <schemaBindings>
-      <package name="com.helger.xsds.xmldsig" />
-    </schemaBindings>
-  </bindings>
   <bindings schemaLocation="../resources/schemas/xmldsig11-schema.xsd" node="/xs:schema">
     <schemaBindings>
       <package name="com.helger.xsds.xmldsig11" />
