@@ -24,11 +24,11 @@
     <artifactId>ph-xsds-parent-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>ph-xsds-xades132</artifactId>
+  <artifactId>ph-xsds-xades141</artifactId>
   <packaging>bundle</packaging>
-  <name>ph-xsds-xades132</name>
-  <description>XAdES 1.3.2 wrapped in JAXB</description>
-  <url>https://github.com/phax/ph-xsds/ph-xsds-xades132</url>
+  <name>ph-xsds-xades141</name>
+  <description>XAdES 1.4.1 wrapped in JAXB</description>
+  <url>https://github.com/phax/ph-xsds/ph-xsds-xades141</url>
   <inceptionYear>2016</inceptionYear>
 
   <licenses>
@@ -58,6 +58,10 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xmldsig</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xades132</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -68,7 +72,7 @@
         <configuration>
           <instructions>
             <Export-Package>
-              com.helger.xsds.xades132.*
+              com.helger.xsds.xades141.*
             </Export-Package>
             <Import-Package>
               !javax.annotation.*,*
@@ -102,7 +106,7 @@
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
           <schemaIncludes>
-            <include>XAdES01903v132-201601.xsd</include>
+            <include>XAdES01903v141-201601.xsd</include>
           </schemaIncludes>
           <extension>true</extension>
           <args>
@@ -124,6 +128,10 @@
             <episode>
               <groupId>com.helger</groupId>
               <artifactId>ph-xsds-xmldsig</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xades132</artifactId>
             </episode>
           </episodes>
         </configuration>
@@ -149,6 +157,7 @@
             <configuration>
               <target>
                 <delete dir="${basedir}/target/generated-sources/xjc/com/helger/xsds/xmldsig/" />
+                <delete dir="${basedir}/target/generated-sources/xjc/com/helger/xsds/xades132/" />
               </target>
             </configuration>
           </execution>

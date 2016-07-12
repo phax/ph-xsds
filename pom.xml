@@ -86,6 +86,11 @@
         <artifactId>ph-xsds-xades132</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-xsds-xades141</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -111,5 +116,6 @@
     <module>ph-xsds-xmldsig</module>
     <module>ph-xsds-xmldsig11</module>
     <module>ph-xsds-xades132</module>
+    <module>ph-xsds-xades141</module>
   </modules>
 </project>
