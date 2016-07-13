@@ -105,6 +105,8 @@
             <include>XAdES01903v132-201601.xsd</include>
           </schemaIncludes>
           <extension>true</extension>
+          <strict>false</strict>
+          <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
           <args>
             <arg>-no-header</arg>
             <arg>-Xph-default-locale</arg>
