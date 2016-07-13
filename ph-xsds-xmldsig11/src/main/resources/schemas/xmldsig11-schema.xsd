@@ -14,7 +14,7 @@
 -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:dsig11="http://www.w3.org/2009/xmldsig11#" targetNamespace="http://www.w3.org/2009/xmldsig11#" version="0.1" elementFormDefault="qualified">
 
-  <import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+  <import namespace="http://www.w3.org/2000/09/xmldsig#" />
 
   <element name="ECKeyValue" type="dsig11:ECKeyValueType"/>
   <complexType name="ECKeyValueType">
