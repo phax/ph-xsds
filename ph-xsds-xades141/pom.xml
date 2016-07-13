@@ -86,6 +86,7 @@
         <configuration>
           <excludes>
             <exclude>src/main/resources/schemas/**</exclude>
+            <exclude>src/main/jaxb/*.txt</exclude>
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
           </excludes>
