@@ -1,0 +1,2 @@
+PUBLIC "http://www.w3.org/2000/09/xmldsig#" "maven:com.helger:ph-xsds-xmldsig:jar::!/schemas/xmldsig-core-schema.xsd"
+PUBLIC "http://uri.etsi.org/01903/v1.3.2#"  "maven:com.helger:ph-xsds-xades132:jar::!/schemas/XAdES01903v132-201601.xsd"
