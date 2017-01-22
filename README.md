@@ -1,4 +1,7 @@
 # ph-xsds
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f026db5f326450e8f1726f1160a9085)](https://www.codacy.com/app/philip/ph-xsds?utm_source=github.com&utm_medium=referral&utm_content=phax/ph-xsds&utm_campaign=badger)
+
 Prebuild JAXB based XSDs referenced in multiple projects.
 The projects contained in here are meant to be reusable JAXB objects.
 You can use the artefacts as episodes in your projects and therefore reduced code bloat.
