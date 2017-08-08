@@ -15,10 +15,12 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
-  * v1.0.1 - 2017-02-24
-    * Binds to ph-commons 8.6.2 - prepared for 9.x
-  * v1.0.0 - 2016-07-13
-    * Binds to ph-commons 8.x
+* v2.0.0 - work in progress
+  * Binds to ph-commons 9.0.0
+* v1.0.1 - 2017-02-24
+  * Binds to ph-commons 8.6.2 - prepared for 9.x
+* v1.0.0 - 2016-07-13
+  * Binds to ph-commons 8.x
 
 ---
 
