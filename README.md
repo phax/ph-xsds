@@ -15,7 +15,7 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
-* v2.0.1 - work in progress
+* v2.0.1 - 2018-10-22
     * Added utility classes to safely access the contained XSD resources
 * v2.0.0 - 2017-11-05
     * Binds to ph-commons 9.0.0
