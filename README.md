@@ -7,20 +7,22 @@ The projects contained in here are meant to be reusable JAXB objects.
 You can use the artefacts as episodes in your projects and therefore reduced code bloat.
 
 Currently contained XSDs are:
-  * XAdES 1.3.2
-  * XAdES 1.4.1 (builds on 1.3.2)
   * XMLDSig 1.0
-  * XMLDSig 1.1 (build on 1.0)
+  * XMLDSig 1.1 (builds on XMLDSig 1.0)
+  * XAdES 1.3.2 (builds on XMLDSig 1.0) 
+  * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
   * CCTS CCT SchemaModule
 
 # News and noteworthy
 
+* v2.0.1 - work in progress
+    * Added utility classes to safely access the contained XSD resources
 * v2.0.0 - 2017-11-05
-  * Binds to ph-commons 9.0.0
+    * Binds to ph-commons 9.0.0
 * v1.0.1 - 2017-02-24
-  * Binds to ph-commons 8.6.2 - prepared for 9.x
+    * Binds to ph-commons 8.6.2 - prepared for 9.x
 * v1.0.0 - 2016-07-13
-  * Binds to ph-commons 8.x
+    * Binds to ph-commons 8.x
 
 ---
 
