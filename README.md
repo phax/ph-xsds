@@ -15,6 +15,8 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
+* v2.0.2 - work in progress
+    * Requires at least ph-commons 9.1.8
 * v2.0.1 - 2018-10-22
     * Added utility classes to safely access the contained XSD resources
 * v2.0.0 - 2017-11-05
