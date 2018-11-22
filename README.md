@@ -15,8 +15,8 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
-* v2.1.0 - work in progress
-    * Requires at least ph-commons 9.2.0
+* v2.1.0 - 2018-11-22
+    * Update to ph-commons 9.2.0
 * v2.0.1 - 2018-10-22
     * Added utility classes to safely access the contained XSD resources
 * v2.0.0 - 2017-11-05
@@ -35,7 +35,7 @@ Add the following to your pom.xml to use this artifact as a BOM:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.0.1</version>
+  <version>2.1.0</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
