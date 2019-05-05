@@ -59,6 +59,18 @@
     </dependency>
     <dependency>
       <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xmldsig11</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xades132</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-xades141</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
       <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
     </dependency>
   </dependencies>
@@ -132,6 +144,18 @@
             </episode>
             <episode>
               <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xmldsig11</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xades132</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-xades141</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
               <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
             </episode>
           </episodes>
@@ -158,6 +182,7 @@
             <configuration>
               <target>
                 <delete dir="${basedir}/target/generated-sources/xjc/com/helger/xsds/xmldsig/" />
+                <delete dir="${basedir}/target/generated-sources/xjc/org" />
               </target>
             </configuration>
           </execution>
