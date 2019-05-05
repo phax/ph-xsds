@@ -12,9 +12,14 @@ Currently contained XSDs are:
   * XAdES 1.3.2 (builds on XMLDSig 1.0) 
   * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
   * CCTS CCT SchemaModule
+  * OASIS BDXR SMP v1 (since v2.1.1)
+  * OASIS BDXR SMP v2 CSD01 (since v2.1.1)
 
 # News and noteworthy
 
+* v2.1.1 - work in progress
+    * Added new submodule `ph-xsds-bdxr-smp1`
+    * Added new submodule `ph-xsds-bdxr-smp2`
 * v2.1.0 - 2018-11-22
     * Update to ph-commons 9.2.0
 * v2.0.1 - 2018-10-22
