@@ -12,12 +12,12 @@ Currently contained XSDs are:
   * XAdES 1.3.2 (builds on XMLDSig 1.0) 
   * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
   * CCTS CCT SchemaModule
-  * OASIS BDXR SMP v1 (since v2.1.1)
-  * OASIS BDXR SMP v2 CSD01 (since v2.1.1)
+  * OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.1.1)
+  * OASIS BDXR SMP v2 CSD01 (builds on XMLDSig 1.0, XMLDSig 1.1, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.1.1)
 
 # News and noteworthy
 
-* v2.1.1 - work in progress
+* v2.1.1 - 2019-05-05
     * Added new submodule `ph-xsds-bdxr-smp1`
     * Added new submodule `ph-xsds-bdxr-smp2`
 * v2.1.0 - 2018-11-22
@@ -40,7 +40,7 @@ Add the following to your pom.xml to use this artifact as a BOM:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
