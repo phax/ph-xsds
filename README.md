@@ -17,6 +17,8 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
+* v2.2.1 - 2019-05-05
+    * Added Java 12 support
 * v2.2.0 - 2019-05-05
     * Added new submodule `ph-xsds-bdxr-smp1`
     * Added new submodule `ph-xsds-bdxr-smp2`
@@ -40,7 +42,7 @@ Add the following to your pom.xml to use this artifact as a BOM:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.2.0</version>
+  <version>2.2.1</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
