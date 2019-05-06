@@ -17,6 +17,8 @@ Currently contained XSDs are:
 
 # News and noteworthy
 
+* v2.2.2 - work in progress
+    * Added a missing piece of Java 12 support
 * v2.2.1 - 2019-05-05
     * Added Java 12 support
 * v2.2.0 - 2019-05-05
