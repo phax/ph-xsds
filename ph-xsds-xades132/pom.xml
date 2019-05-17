@@ -30,7 +30,7 @@
   <description>XAdES 1.3.2 wrapped in JAXB</description>
   <url>https://github.com/phax/ph-xsds/ph-xsds-xades132</url>
   <inceptionYear>2016</inceptionYear>
-´
+
   <licenses>
     <license>
       <name>Apache 2</name>
