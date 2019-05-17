@@ -29,6 +29,9 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CCCTS
 {
+  public static final String DEFAULT_PREFIX = "ccts";
+  public static final String NAMESPACE_URI = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2";
+
   private CCCTS ()
   {}
 

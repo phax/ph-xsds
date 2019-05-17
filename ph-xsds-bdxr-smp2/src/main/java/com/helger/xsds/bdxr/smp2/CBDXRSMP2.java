@@ -36,6 +36,27 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 @Immutable
 public final class CBDXRSMP2
 {
+  public static final String DEFAULT_PREFIX_UNQUALIFIED_DATA_TYPES = "udt";
+  public static final String NAMESPACE_URI_UNQUALIFIED_DATA_TYPES = "http://docs.oasis-open.org/bdxr/ns/SMP/2/UnqualifiedDataTypes";
+
+  public static final String DEFAULT_PREFIX_QUALIFIED_DATA_TYPES = "qdt";
+  public static final String NAMESPACE_URI_QUALIFIED_DATA_TYPES = "http://docs.oasis-open.org/bdxr/ns/SMP/2/QualifiedDataTypes";
+
+  public static final String DEFAULT_PREFIX_BASIC_COMPONENTS = "smb";
+  public static final String NAMESPACE_URI_BASIC_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/SMP/2/BasicComponents";
+
+  public static final String DEFAULT_PREFIX_EXTENSION_COMPONENTS = "ext";
+  public static final String NAMESPACE_URI_EXTENSION_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/SMP/2/ExtensionComponents";
+
+  public static final String DEFAULT_PREFIX_AGGREGATE_COMPONENTS = "sma";
+  public static final String NAMESPACE_URI_AGGREGATE_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/SMP/2/AggregateComponents";
+
+  public static final String DEFAULT_PREFIX_SERVICE_GROUP = "b2sg";
+  public static final String NAMESPACE_URI_SERVICE_GROUP = "http://docs.oasis-open.org/bdxr/ns/SMP/2/ServiceGroup";
+
+  public static final String DEFAULT_PREFIX_SERVICE_METADATA = "b2sm";
+  public static final String NAMESPACE_URI_SERVICE_METADATA = "http://docs.oasis-open.org/bdxr/ns/SMP/2/ServiceMetadata";
+
   private CBDXRSMP2 ()
   {}
 

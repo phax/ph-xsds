@@ -19,6 +19,8 @@ Currently contained XSDs are:
 
 * v2.2.3 - work in progress
     * Extended API of `CBDXRSMP1` and `CBDXRSMP2` to list all necessary includes
+    * Added namespace URI constants
+    * Added default XML namespace prefixes 
 * v2.2.2 - 2019-05-06
     * Added a missing piece of Java 12 support
 * v2.2.1 - 2019-05-05

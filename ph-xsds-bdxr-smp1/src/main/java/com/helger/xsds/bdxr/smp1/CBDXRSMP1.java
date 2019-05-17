@@ -33,6 +33,9 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 @Immutable
 public final class CBDXRSMP1
 {
+  public static final String DEFAULT_PREFIX = "bdxr";
+  public static final String NAMESPACE_URI = "http://docs.oasis-open.org/bdxr/ns/SMP/2016/05";
+
   private CBDXRSMP1 ()
   {}
 

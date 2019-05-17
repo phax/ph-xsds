@@ -34,6 +34,9 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 @Immutable
 public final class CXAdES141
 {
+  public static final String DEFAULT_PREFIX = "xades141";
+  public static final String NAMESPACE_URI = "http://uri.etsi.org/01903/v1.4.1#";
+
   private CXAdES141 ()
   {}
 

@@ -29,6 +29,9 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CXMLDSig
 {
+  public static final String DEFAULT_PREFIX = "ds";
+  public static final String NAMESPACE_URI = "http://www.w3.org/2000/09/xmldsig#";
+
   private CXMLDSig ()
   {}
 

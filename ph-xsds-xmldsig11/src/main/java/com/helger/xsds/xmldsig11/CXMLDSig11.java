@@ -33,6 +33,9 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 @Immutable
 public final class CXMLDSig11
 {
+  public static final String DEFAULT_PREFIX = "dsig11";
+  public static final String NAMESPACE_URI = "http://www.w3.org/2009/xmldsig11#";
+
   private CXMLDSig11 ()
   {}
 
