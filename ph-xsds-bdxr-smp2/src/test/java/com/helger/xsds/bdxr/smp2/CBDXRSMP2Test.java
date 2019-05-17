@@ -21,7 +21,13 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
+
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Test class for class {@link CBDXRSMP2}.
@@ -33,6 +39,27 @@ public final class CBDXRSMP2Test
   @Test
   public void testBasic ()
   {
+    assertNotNull (CBDXRSMP2.getXSDResourceUnqualifiedDataTypes ());
+    assertTrue (CBDXRSMP2.getXSDResourceUnqualifiedDataTypes ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourceQualifiedDataTypes ());
+    assertTrue (CBDXRSMP2.getXSDResourceQualifiedDataTypes ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourceBasicComponents ());
+    assertTrue (CBDXRSMP2.getXSDResourceBasicComponents ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourceExtensionContentDataType ());
+    assertTrue (CBDXRSMP2.getXSDResourceExtensionContentDataType ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourceExtensionComponents ());
+    assertTrue (CBDXRSMP2.getXSDResourceExtensionComponents ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourcePayloadContentDataType ());
+    assertTrue (CBDXRSMP2.getXSDResourcePayloadContentDataType ().exists ());
+
+    assertNotNull (CBDXRSMP2.getXSDResourceAggregateComponents ());
+    assertTrue (CBDXRSMP2.getXSDResourceAggregateComponents ().exists ());
+
     assertNotNull (CBDXRSMP2.getXSDResourceServiceGroup ());
     assertTrue (CBDXRSMP2.getXSDResourceServiceGroup ().exists ());
     assertEquals (CBDXRSMP2.getXSDResourceServiceGroup (), CBDXRSMP2.getXSDResourceServiceGroup ());
@@ -42,5 +69,25 @@ public final class CBDXRSMP2Test
     assertTrue (CBDXRSMP2.getXSDResourceServiceMetadata ().exists ());
     assertEquals (CBDXRSMP2.getXSDResourceServiceMetadata (), CBDXRSMP2.getXSDResourceServiceMetadata ());
     assertNotSame (CBDXRSMP2.getXSDResourceServiceMetadata (), CBDXRSMP2.getXSDResourceServiceMetadata ());
+  }
+
+  @Test
+  public void testSchemaCreationServiceGroup ()
+  {
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllIncludes ();
+    aList.add (CBDXRSMP2.getXSDResourceServiceGroup ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreationServiceMetadata ()
+  {
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllIncludes ();
+    aList.add (CBDXRSMP2.getXSDResourceServiceMetadata ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
   }
 }

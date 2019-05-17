@@ -21,7 +21,13 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
+
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Test class for class {@link CXMLDSig11}.
@@ -37,5 +43,15 @@ public final class CXMLDSig11Test
     assertTrue (CXMLDSig11.getXSDResource ().exists ());
     assertEquals (CXMLDSig11.getXSDResource (), CXMLDSig11.getXSDResource ());
     assertNotSame (CXMLDSig11.getXSDResource (), CXMLDSig11.getXSDResource ());
+  }
+
+  @Test
+  public void testSchemaCreation ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXMLDSig11.getAllIncludes ();
+    aList.add (CXMLDSig11.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
   }
 }

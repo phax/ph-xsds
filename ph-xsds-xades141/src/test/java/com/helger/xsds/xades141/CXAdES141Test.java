@@ -21,14 +21,20 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
+
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Test class for class {@link CXAdES141}.
  *
  * @author Philip Helger
  */
-public final class CXAdES132Test
+public final class CXAdES141Test
 {
   @Test
   public void testBasic ()
@@ -37,5 +43,15 @@ public final class CXAdES132Test
     assertTrue (CXAdES141.getXSDResource ().exists ());
     assertEquals (CXAdES141.getXSDResource (), CXAdES141.getXSDResource ());
     assertNotSame (CXAdES141.getXSDResource (), CXAdES141.getXSDResource ());
+  }
+
+  @Test
+  public void testSchemaCreation ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXAdES141.getAllIncludes ();
+    aList.add (CXAdES141.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
   }
 }

@@ -57,6 +57,12 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xmldsig</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xml</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>

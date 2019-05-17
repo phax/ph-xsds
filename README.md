@@ -13,10 +13,12 @@ Currently contained XSDs are:
   * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
   * CCTS CCT SchemaModule
   * OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.2.0)
-  * OASIS BDXR SMP v2 CSD01 (builds on XMLDSig 1.0, XMLDSig 1.1, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
+  * OASIS BDXR SMP v2 CSD01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
 
 # News and noteworthy
 
+* v2.2.3 - work in progress
+    * Extended API of `CBDXRSMP1` and `CBDXRSMP2` to list all necessary includes
 * v2.2.2 - 2019-05-06
     * Added a missing piece of Java 12 support
 * v2.2.1 - 2019-05-05

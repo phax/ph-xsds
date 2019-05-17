@@ -59,6 +59,12 @@
       <artifactId>ph-jaxb-pom</artifactId>
       <type>pom</type>
     </dependency>
+
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xml</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>

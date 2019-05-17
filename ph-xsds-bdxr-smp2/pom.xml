@@ -73,6 +73,12 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xml</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>

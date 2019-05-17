@@ -32,6 +32,7 @@ public final class CCCTS
   private CCCTS ()
   {}
 
+  // No includes needed
   @Nonnull
   public static final ClassPathResource getXSDResource ()
   {

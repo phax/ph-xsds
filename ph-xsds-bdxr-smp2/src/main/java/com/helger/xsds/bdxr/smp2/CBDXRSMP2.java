@@ -19,7 +19,14 @@ package com.helger.xsds.bdxr.smp2;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
+import com.helger.xsds.xades132.CXAdES132;
+import com.helger.xsds.xades141.CXAdES141;
+import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * Utility class for this schema module
@@ -32,17 +39,93 @@ public final class CBDXRSMP2
   private CBDXRSMP2 ()
   {}
 
-  // Note: requires XMLDSig 1.0 and CCTS schema module
   @Nonnull
-  public static final ClassPathResource getXSDResourceServiceGroup ()
+  private static ClassLoader _getCL ()
   {
-    return new ClassPathResource ("/schemas/ServiceGroup-2.0.xsd", CBDXRSMP2.class.getClassLoader ());
+    return CBDXRSMP2.class.getClassLoader ();
   }
 
-  // Note: requires XMLDSig 1.0 and CCTS schema module
+  // Note: requires CCTS Schema Module
   @Nonnull
-  public static final ClassPathResource getXSDResourceServiceMetadata ()
+  public static ClassPathResource getXSDResourceUnqualifiedDataTypes ()
   {
-    return new ClassPathResource ("/schemas/ServiceMetadata-2.0.xsd", CBDXRSMP2.class.getClassLoader ());
+    return new ClassPathResource ("/schemas/common/SMP-UnqualifiedDataTypes-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires UnqualifiedDataTypes
+  @Nonnull
+  public static ClassPathResource getXSDResourceQualifiedDataTypes ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-QualifiedDataTypes-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires QualifiedDataTypes, UnqualifiedDataTypes
+  @Nonnull
+  public static ClassPathResource getXSDResourceBasicComponents ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-BasicComponents-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires Xades 1.3.2, Xades 1.4.1
+  @Nonnull
+  public static ClassPathResource getXSDResourceExtensionContentDataType ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-ExtensionContentDataType-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires UnqualifiedDataTypes, BasicComponents,
+  // ExtensionContentDataType
+  @Nonnull
+  public static ClassPathResource getXSDResourceExtensionComponents ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-ExtensionComponents-2.0.xsd", _getCL ());
+  }
+
+  @Nonnull
+  public static ClassPathResource getXSDResourcePayloadContentDataType ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-PayloadContentDataType-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires BasicComponents, ExtensionComponents, PayloadContentDataType
+  @Nonnull
+  public static ClassPathResource getXSDResourceAggregateComponents ()
+  {
+    return new ClassPathResource ("/schemas/common/SMP-AggregateComponents-2.0.xsd", _getCL ());
+  }
+
+  /**
+   * @return A list of all includes in the correct order. Never
+   *         <code>null</code>.
+   */
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  {
+    return new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                    getXSDResourceUnqualifiedDataTypes (),
+                                    getXSDResourceQualifiedDataTypes (),
+                                    getXSDResourceBasicComponents (),
+                                    CXMLDSig.getXSDResource (),
+                                    CXAdES132.getXSDResource (),
+                                    CXAdES141.getXSDResource (),
+                                    getXSDResourceExtensionComponents (),
+                                    getXSDResourceAggregateComponents ());
+  }
+
+  // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
+  // XMLDsig
+  @Nonnull
+  public static ClassPathResource getXSDResourceServiceGroup ()
+  {
+    return new ClassPathResource ("/schemas/ServiceGroup-2.0.xsd", _getCL ());
+  }
+
+  // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
+  // XMLDsig
+  @Nonnull
+  public static ClassPathResource getXSDResourceServiceMetadata ()
+  {
+    return new ClassPathResource ("/schemas/ServiceMetadata-2.0.xsd", _getCL ());
   }
 }

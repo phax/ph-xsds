@@ -21,7 +21,14 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
+
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Test class for class {@link CCCTS}.
@@ -37,5 +44,16 @@ public final class CCCTSTest
     assertTrue (CCCTS.getXSDResource ().exists ());
     assertEquals (CCCTS.getXSDResource (), CCCTS.getXSDResource ());
     assertNotSame (CCCTS.getXSDResource (), CCCTS.getXSDResource ());
+  }
+
+  @Test
+  public void testSchemaCreation ()
+  {
+    // no includes
+    final ICommonsList <ClassPathResource> aList = new CommonsArrayList <> ();
+    aList.add (CCCTS.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
   }
 }
