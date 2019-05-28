@@ -13,7 +13,7 @@ Currently contained XSDs are:
   * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
   * CCTS CCT SchemaModule
   * OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.2.0)
-  * OASIS BDXR SMP v2 CSD01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
+  * OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
 
 # News and noteworthy
 

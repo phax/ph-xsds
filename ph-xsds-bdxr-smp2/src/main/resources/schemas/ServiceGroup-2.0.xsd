@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+     Service Metadata Publishing (SMP) Version 2.0
+     Committee Specification 01
+     20 May 2019
+     Copyright (c) OASIS Open 2019. All Rights Reserved.
+     Source: https://docs.oasis-open.org/bdxr/bdx-smp/v2.0/cs01/
+     Latest version of narrative specification: https://docs.oasis-open.org/bdxr/bdx-smp/v2.0/bdx-smp-v2.0.html
+     TC IPR Statement: https://www.oasis-open.org/committees/bdxr/ipr.php
+-->
+<!--
   Library:           OASIS Service Metadata Publisher (SMP) 2.0 2.0 CSD01
                      http://docs.oasis-open.org/bdxr/bdx-smp/v2.0/csd01/
   Release Date:      29 April 2019
@@ -25,7 +34,7 @@
                schemaLocation="common/SMP-ExtensionComponents-2.0.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
-   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
+   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <xsd:element name="ServiceGroup" type="ServiceGroupType"/>
    <xsd:complexType name="ServiceGroupType">
       <xsd:sequence>
