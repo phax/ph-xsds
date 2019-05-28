@@ -45,7 +45,7 @@ public final class CXAdES132
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
     return new CommonsArrayList <> (CXMLDSig.getXSDResource ());
   }
@@ -55,5 +55,14 @@ public final class CXAdES132
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/XAdES01903v132-201601.xsd", CXAdES132.class.getClassLoader ());
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDResources ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
+    ret.add (getXSDResource ());
+    return ret;
   }
 }

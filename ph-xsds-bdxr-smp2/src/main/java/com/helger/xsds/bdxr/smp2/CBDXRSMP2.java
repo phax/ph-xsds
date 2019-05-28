@@ -121,7 +121,7 @@ public final class CBDXRSMP2
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
     return new CommonsArrayList <> (CCCTS.getXSDResource (),
                                     getXSDResourceUnqualifiedDataTypes (),
@@ -142,11 +142,29 @@ public final class CBDXRSMP2
     return new ClassPathResource ("/schemas/ServiceGroup-2.0.xsd", _getCL ());
   }
 
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDResourceServiceGroup ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
+    ret.add (getXSDResourceServiceGroup ());
+    return ret;
+  }
+
   // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
   // XMLDsig
   @Nonnull
   public static ClassPathResource getXSDResourceServiceMetadata ()
   {
     return new ClassPathResource ("/schemas/ServiceMetadata-2.0.xsd", _getCL ());
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDResourceServiceMetadata ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
+    ret.add (getXSDResourceServiceMetadata ());
+    return ret;
   }
 }

@@ -48,8 +48,17 @@ public final class CXAdES141Test
   @Test
   public void testSchemaCreation ()
   {
-    final ICommonsList <ClassPathResource> aList = CXAdES141.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CXAdES141.getAllXSDIncludes ();
     aList.add (CXAdES141.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreation2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXAdES141.getAllXSDResources ();
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
     assertNotNull (aSchema);

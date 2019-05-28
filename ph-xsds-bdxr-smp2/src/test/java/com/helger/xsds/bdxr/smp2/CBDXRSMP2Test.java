@@ -74,8 +74,17 @@ public final class CBDXRSMP2Test
   @Test
   public void testSchemaCreationServiceGroup ()
   {
-    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllXSDIncludes ();
     aList.add (CBDXRSMP2.getXSDResourceServiceGroup ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreationServiceGroup2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllXSDResourceServiceGroup ();
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
     assertNotNull (aSchema);
@@ -84,8 +93,17 @@ public final class CBDXRSMP2Test
   @Test
   public void testSchemaCreationServiceMetadata ()
   {
-    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllXSDIncludes ();
     aList.add (CBDXRSMP2.getXSDResourceServiceMetadata ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreationServiceMetadata2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP2.getAllXSDResourceServiceMetadata ();
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
     assertNotNull (aSchema);

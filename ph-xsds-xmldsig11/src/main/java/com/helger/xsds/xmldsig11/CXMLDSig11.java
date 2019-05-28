@@ -45,7 +45,7 @@ public final class CXMLDSig11
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
     return new CommonsArrayList <> (CXMLDSig.getXSDResource ());
   }
@@ -55,5 +55,14 @@ public final class CXMLDSig11
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/xmldsig11-schema.xsd", CXMLDSig11.class.getClassLoader ());
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDResources ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
+    ret.add (getXSDResource ());
+    return ret;
   }
 }

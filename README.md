@@ -18,7 +18,7 @@ Currently contained XSDs are:
 # News and noteworthy
 
 * v2.2.3 - work in progress
-    * Extended API of `CBDXRSMP1` and `CBDXRSMP2` to list all necessary includes
+    * Extended APIs of relevant project to list all necessary includes in the correct order
     * Added namespace URI constants
     * Added default XML namespace prefixes 
 * v2.2.2 - 2019-05-06

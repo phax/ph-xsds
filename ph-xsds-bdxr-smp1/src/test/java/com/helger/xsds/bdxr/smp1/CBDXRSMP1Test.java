@@ -48,8 +48,17 @@ public final class CBDXRSMP1Test
   @Test
   public void testSchemaCreation ()
   {
-    final ICommonsList <ClassPathResource> aList = CBDXRSMP1.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP1.getAllXSDIncludes ();
     aList.add (CBDXRSMP1.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreation2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CBDXRSMP1.getAllXSDResources ();
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
     assertNotNull (aSchema);

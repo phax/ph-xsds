@@ -48,8 +48,17 @@ public final class CXMLDSig11Test
   @Test
   public void testSchemaCreation ()
   {
-    final ICommonsList <ClassPathResource> aList = CXMLDSig11.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CXMLDSig11.getAllXSDIncludes ();
     aList.add (CXMLDSig11.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreation2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXMLDSig11.getAllXSDResources ();
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
     assertNotNull (aSchema);
