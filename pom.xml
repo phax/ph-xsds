@@ -89,6 +89,16 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-xsds-xmlenc</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-xsds-xmlenc11</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-xsds-xades132</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -136,6 +146,8 @@
   <modules>
     <module>ph-xsds-xmldsig</module>
     <module>ph-xsds-xmldsig11</module>
+    <module>ph-xsds-xmlenc</module>
+    <module>ph-xsds-xmlenc11</module>
     <module>ph-xsds-xades132</module>
     <module>ph-xsds-xades141</module>
     <module>ph-xsds-ccts-cct-schemamodule</module>
