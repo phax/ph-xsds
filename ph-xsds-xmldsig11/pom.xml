@@ -105,9 +105,6 @@
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
-          <schemaIncludes>
-            <include>xmldsig11-schema.xsd</include>
-          </schemaIncludes>
           <extension>true</extension>
           <strict>false</strict>
           <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
