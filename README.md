@@ -25,7 +25,7 @@ Add the following to your pom.xml to use this artifact as a BOM:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.2.3</version>
+  <version>2.2.4</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -38,7 +38,7 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
-* v2.2.4 - work in progress
+* v2.2.4 - 2020-03-18
     * Added new submodule `ph-xsds-xmlenc` for "XML Encryption Core"
     * Added new submodule `ph-xsds-xmlenc11` for "XML Encryption 1.1"
 * v2.2.3 - 2019-05-28
