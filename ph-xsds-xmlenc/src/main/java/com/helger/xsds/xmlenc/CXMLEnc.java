@@ -19,7 +19,11 @@ package com.helger.xsds.xmlenc;
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * Utility class for this schema module
@@ -35,9 +39,30 @@ public final class CXMLEnc
   private CXMLEnc ()
   {}
 
+  /**
+   * @return A list of all includes in the correct order. Never
+   *         <code>null</code>.
+   */
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
+  {
+    return new CommonsArrayList <> (CXMLDSig.getXSDResource ());
+  }
+
+  // Note: requires XMLDSig 1.0 schema
   @Nonnull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/xenc-schema.xsd", CXMLEnc.class.getClassLoader ());
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDResources ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
+    ret.add (getXSDResource ());
+    return ret;
   }
 }

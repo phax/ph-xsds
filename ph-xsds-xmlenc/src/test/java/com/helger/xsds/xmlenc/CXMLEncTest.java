@@ -21,9 +21,13 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import javax.xml.validation.Schema;
+
 import org.junit.Test;
 
-import com.helger.xsds.xmlenc.CXMLEnc;
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xml.schema.XMLSchemaCache;
 
 /**
  * Test class for class {@link CXMLEnc}.
@@ -39,5 +43,24 @@ public final class CXMLEncTest
     assertTrue (CXMLEnc.getXSDResource ().exists ());
     assertEquals (CXMLEnc.getXSDResource (), CXMLEnc.getXSDResource ());
     assertNotSame (CXMLEnc.getXSDResource (), CXMLEnc.getXSDResource ());
+  }
+
+  @Test
+  public void testSchemaCreation ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXMLEnc.getAllXSDIncludes ();
+    aList.add (CXMLEnc.getXSDResource ());
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
+  }
+
+  @Test
+  public void testSchemaCreation2 ()
+  {
+    final ICommonsList <ClassPathResource> aList = CXMLEnc.getAllXSDResources ();
+
+    final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
+    assertNotNull (aSchema);
   }
 }
