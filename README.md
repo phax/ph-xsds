@@ -7,13 +7,34 @@ The projects contained in here are meant to be reusable JAXB objects.
 You can use the artefacts as episodes in your projects and therefore reduced code bloat.
 
 Currently contained XSDs are:
-  * XMLDSig 1.0
-  * XMLDSig 1.1 (builds on XMLDSig 1.0)
-  * XAdES 1.3.2 (builds on XMLDSig 1.0) 
-  * XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
-  * CCTS CCT SchemaModule
-  * OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.2.0)
-  * OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
+* XMLDSig 1.0
+* XMLDSig 1.1 (builds on XMLDSig 1.0)
+* XAdES 1.3.2 (builds on XMLDSig 1.0) 
+* XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
+* CCTS CCT SchemaModule
+* OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.2.0)
+* OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
+* XML Encryption Core (builds on XMLDSig 1.0) (since v2.2.4)
+* XML Encryption 1.1 (builds on XMLDSig 1.0 and XML Encryption Core) (since v2.2.4)
+
+# Maven usage
+
+Add the following to your pom.xml to use this artifact as a BOM:
+
+```xml
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-xsds-parent-pom</artifactId>
+  <version>2.2.3</version>
+  <type>pom</type>
+  <scope>import</scope>
+</dependency>
+```
+
+# Gradle considerations
+
+This project relies on JDK version based Maven profile activation.
+See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 # News and noteworthy
 
@@ -41,26 +62,6 @@ Currently contained XSDs are:
     * Binds to ph-commons 8.6.2 - prepared for 9.x
 * v1.0.0 - 2016-07-13
     * Binds to ph-commons 8.x
-
-
-# Maven usage
-
-Add the following to your pom.xml to use this artifact as a BOM:
-
-```xml
-<dependency>
-  <groupId>com.helger</groupId>
-  <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.2.3</version>
-  <type>pom</type>
-  <scope>import</scope>
-</dependency>
-```
-
-# Gradle considerations
-
-This project relies on JDK version based Maven profile activation.
-See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 ---
 
