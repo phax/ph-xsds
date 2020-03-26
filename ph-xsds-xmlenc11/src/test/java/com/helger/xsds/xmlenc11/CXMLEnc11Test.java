@@ -28,7 +28,6 @@ import org.junit.Test;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.xml.schema.XMLSchemaCache;
-import com.helger.xsds.xmlenc11.CXMLEnc11;
 
 /**
  * Test class for class {@link CXMLEnc11}.
