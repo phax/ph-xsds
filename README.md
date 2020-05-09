@@ -16,16 +16,18 @@ Currently contained XSDs are:
 * OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
 * XML Encryption Core (builds on XMLDSig 1.0) (since v2.2.4)
 * XML Encryption 1.1 (builds on XMLDSig 1.0 and XML Encryption Core) (since v2.2.4)
+* XML.xsd (since v2.2.5)
+* XLink (build on XML.xsd) (since v2.2.5)
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact as a BOM:
+Add the following to your pom.xml to use this artifact as a BOM (replacing `x.y.z` with the real version number):
 
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>2.2.4</version>
+  <version>x.y.z</version>
   <type>pom</type>
   <scope>import</scope>
 </dependency>
@@ -38,6 +40,9 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.2.5 - 2020-05-09
+    * Added new submodule `ph-xsds-xml` for "XML.xsd"
+    * Added new submodule `ph-xsds-xlink` for "XLink"
 * v2.2.4 - 2020-03-18
     * Added new submodule `ph-xsds-xmlenc` for "XML Encryption Core"
     * Added new submodule `ph-xsds-xmlenc11` for "XML Encryption 1.1"
