@@ -40,7 +40,7 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
-* v2.2.5 - 2020-05-09
+* v2.2.5 - 2020-05-10
     * Added new submodule `ph-xsds-xml` for "XML.xsd"
     * Added new submodule `ph-xsds-xlink` for "XLink"
 * v2.2.4 - 2020-03-18
