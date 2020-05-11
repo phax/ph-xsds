@@ -24,18 +24,18 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Test class for class {@link CXML}.
+ * Test class for class {@link CXML_XSD}.
  *
  * @author Philip Helger
  */
-public final class CXMLTest
+public final class CXML_XSDTest
 {
   @Test
   public void testBasic ()
   {
-    assertNotNull (CXML.getXSDResource ());
-    assertTrue (CXML.getXSDResource ().exists ());
-    assertEquals (CXML.getXSDResource (), CXML.getXSDResource ());
-    assertNotSame (CXML.getXSDResource (), CXML.getXSDResource ());
+    assertNotNull (CXML_XSD.getXSDResource ());
+    assertTrue (CXML_XSD.getXSDResource ().exists ());
+    assertEquals (CXML_XSD.getXSDResource (), CXML_XSD.getXSDResource ());
+    assertNotSame (CXML_XSD.getXSDResource (), CXML_XSD.getXSDResource ());
   }
 }

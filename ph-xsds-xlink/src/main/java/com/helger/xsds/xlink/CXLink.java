@@ -23,7 +23,7 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.xsds.xml.CXML;
+import com.helger.xsds.xml.CXML_XSD;
 
 /**
  * Utility class for this schema module
@@ -47,7 +47,7 @@ public final class CXLink
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
-    return new CommonsArrayList <> (CXML.getXSDResource ());
+    return new CommonsArrayList <> (CXML_XSD.getXSDResource ());
   }
 
   // Note: requires XML schema

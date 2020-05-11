@@ -28,17 +28,17 @@ import com.helger.commons.io.resource.ClassPathResource;
  * @author Philip Helger
  */
 @Immutable
-public final class CXML
+public final class CXML_XSD
 {
   public static final String DEFAULT_PREFIX = XMLConstants.DEFAULT_NS_PREFIX;
   public static final String NAMESPACE_URI = XMLConstants.XML_NS_URI;
 
-  private CXML ()
+  private CXML_XSD ()
   {}
 
   @Nonnull
   public static final ClassPathResource getXSDResource ()
   {
-    return new ClassPathResource ("/schemas/xml.xsd", CXML.class.getClassLoader ());
+    return new ClassPathResource ("/schemas/xml.xsd", CXML_XSD.class.getClassLoader ());
   }
 }
