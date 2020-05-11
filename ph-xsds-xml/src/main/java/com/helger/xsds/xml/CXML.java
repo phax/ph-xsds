@@ -18,6 +18,7 @@ package com.helger.xsds.xml;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
+import javax.xml.XMLConstants;
 
 import com.helger.commons.io.resource.ClassPathResource;
 
@@ -29,8 +30,8 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CXML
 {
-  public static final String DEFAULT_PREFIX = "xenc";
-  public static final String NAMESPACE_URI = "http://www.w3.org/XML/1998/namespace";
+  public static final String DEFAULT_PREFIX = XMLConstants.DEFAULT_NS_PREFIX;
+  public static final String NAMESPACE_URI = XMLConstants.XML_NS_URI;
 
   private CXML ()
   {}
