@@ -124,6 +124,11 @@
       </dependency>
       <dependency>
         <groupId>com.helger</groupId>
+        <artifactId>ph-xsds-wsaddr</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
         <artifactId>ph-xsds-bdxr-smp1</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -163,6 +168,7 @@
     <module>ph-xsds-xades132</module>
     <module>ph-xsds-xades141</module>
     <module>ph-xsds-ccts-cct-schemamodule</module>
+    <module>ph-xsds-wsaddr</module>
     <module>ph-xsds-bdxr-smp1</module>
     <module>ph-xsds-bdxr-smp2</module>
   </modules>

@@ -16,8 +16,9 @@ Currently contained XSDs are:
 * OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
 * XML Encryption Core (builds on XMLDSig 1.0) (since v2.2.4)
 * XML Encryption 1.1 (builds on XMLDSig 1.0 and XML Encryption Core) (since v2.2.4)
-* XML.xsd (since v2.2.5)
+* XML.xsd 2009-01 (since v2.2.5)
 * XLink (build on XML.xsd) (since v2.2.5)
+* Web Services Addressing 1.0 (since v2.2.6)
 
 # Maven usage
 
@@ -40,8 +41,11 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.2.6 - 2020-05-11
+    * Fixed package and class name for the XML XSD handling
+    * Added new submodule `ph-xsds-wsaddr` for "Web Services Addressing 1.0"
 * v2.2.5 - 2020-05-10
-    * Added new submodule `ph-xsds-xml` for "XML.xsd"
+    * Added new submodule `ph-xsds-xml` for "XML.xsd 2009-01"
     * Added new submodule `ph-xsds-xlink` for "XLink"
 * v2.2.4 - 2020-03-18
     * Added new submodule `ph-xsds-xmlenc` for "XML Encryption Core"
