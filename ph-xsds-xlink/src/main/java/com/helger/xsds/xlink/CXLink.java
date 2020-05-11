@@ -23,7 +23,7 @@ import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.io.resource.ClassPathResource;
-import com.helger.xsds.xmlenc.CXML;
+import com.helger.xsds.xml.CXML;
 
 /**
  * Utility class for this schema module

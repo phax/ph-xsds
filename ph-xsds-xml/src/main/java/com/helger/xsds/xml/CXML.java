@@ -14,28 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.xsds.xmlenc;
+package com.helger.xsds.xml;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertTrue;
+import javax.annotation.Nonnull;
+import javax.annotation.concurrent.Immutable;
 
-import org.junit.Test;
+import com.helger.commons.io.resource.ClassPathResource;
 
 /**
- * Test class for class {@link CXML}.
+ * Utility class for this schema module
  *
  * @author Philip Helger
  */
-public final class CXMLTest
+@Immutable
+public final class CXML
 {
-  @Test
-  public void testBasic ()
+  public static final String DEFAULT_PREFIX = "xenc";
+  public static final String NAMESPACE_URI = "http://www.w3.org/XML/1998/namespace";
+
+  private CXML ()
+  {}
+
+  @Nonnull
+  public static final ClassPathResource getXSDResource ()
   {
-    assertNotNull (CXML.getXSDResource ());
-    assertTrue (CXML.getXSDResource ().exists ());
-    assertEquals (CXML.getXSDResource (), CXML.getXSDResource ());
-    assertNotSame (CXML.getXSDResource (), CXML.getXSDResource ());
+    return new ClassPathResource ("/schemas/xml.xsd", CXML.class.getClassLoader ());
   }
 }
