@@ -1,2 +1,2 @@
-PUBLIC "http://www.w3.org/2000/09/xmldsig#" "maven:com.helger:ph-xsds-xmldsig:jar::!/schemas/xmldsig-core-schema.xsd"
-PUBLIC "http://www.w3.org/2001/04/xmlenc#"  "maven:com.helger:ph-xsds-xmlenc:jar::!/schemas/xenc-schema.xsd"
+PUBLIC "http://www.w3.org/2000/09/xmldsig#" "maven:com.helger.xsd:ph-xsds-xmldsig:jar::!/schemas/xmldsig-core-schema.xsd"
+PUBLIC "http://www.w3.org/2001/04/xmlenc#"  "maven:com.helger.xsd:ph-xsds-xmlenc:jar::!/schemas/xenc-schema.xsd"
