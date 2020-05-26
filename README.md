@@ -24,8 +24,6 @@ Currently contained XSDs are:
 
 Add the following to your pom.xml to use this artifact as a BOM (replacing `x.y.z` with the real version number):
 
-For versions &ge; 2.3.0:
-
 ```xml
 <dependency>
   <groupId>com.helger.xsd</groupId>
@@ -36,17 +34,7 @@ For versions &ge; 2.3.0:
 </dependency>
 ```
 
-For versions < 2.3.0 (different group ID):
-
-```xml
-<dependency>
-  <groupId>com.helger</groupId>
-  <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>x.y.z</version>
-  <type>pom</type>
-  <scope>import</scope>
-</dependency>
-```
+Note: prior to v2.3.0 the Maven groupId was `com.helger`.
 
 
 # Gradle considerations
