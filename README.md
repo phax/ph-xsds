@@ -24,6 +24,20 @@ Currently contained XSDs are:
 
 Add the following to your pom.xml to use this artifact as a BOM (replacing `x.y.z` with the real version number):
 
+For versions &ge; 2.3.0:
+
+```xml
+<dependency>
+  <groupId>com.helger.xsd</groupId>
+  <artifactId>ph-xsds-parent-pom</artifactId>
+  <version>x.y.z</version>
+  <type>pom</type>
+  <scope>import</scope>
+</dependency>
+```
+
+For versions < 2.3.0 (different group ID):
+
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
@@ -34,6 +48,7 @@ Add the following to your pom.xml to use this artifact as a BOM (replacing `x.y.
 </dependency>
 ```
 
+
 # Gradle considerations
 
 This project relies on JDK version based Maven profile activation.
@@ -41,6 +56,8 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.3.0 - 2020-05-26
+    * Change the "groupId" of the Maven artefacts to `com.helger.xsd`
 * v2.2.6 - 2020-05-11
     * Fixed package and class name for the XML XSD handling
     * Added new submodule `ph-xsds-wsaddr` for "Web Services Addressing 1.0"
