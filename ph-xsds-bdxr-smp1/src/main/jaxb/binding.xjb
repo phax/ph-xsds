@@ -18,22 +18,28 @@
 -->
 <bindings version="2.1" 
           xmlns="http://java.sun.com/xml/ns/jaxb"
-          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
-  <globalBindings fixedAttributeAsConstantProperty="true" typesafeEnumMaxMembers="32000" />
+  <globalBindings fixedAttributeAsConstantProperty="true" typesafeEnumMaxMembers="32000">
+    <xjc:javaType name="java.time.LocalDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterLocalDateTime" />
+    <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterLocalDate" />
+    <xjc:javaType name="java.time.LocalTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterLocalTime" />
+    <xjc:javaType name="java.time.Duration" xmlType="xsd:duration" adapter="com.helger.jaxb.adapter.AdapterDuration" />
+  </globalBindings>
   <bindings schemaLocation="../resources/schemas/bdx-smp-201605.xsd">
     <schemaBindings>
       <package name="com.helger.xsds.bdxr.smp1" />
     </schemaBindings>
     <!--  
-    <bindings node="//xs:complexType[@name='ParticipantIdentifierType']">
+    <bindings node="//xsd:complexType[@name='ParticipantIdentifierType']">
       <inheritance:implements>com.helger.peppol.identifier.generic.participant.IMutableParticipantIdentifier</inheritance:implements>
     </bindings> 
-    <bindings node="//xs:complexType[@name='DocumentIdentifierType']">
+    <bindings node="//xsd:complexType[@name='DocumentIdentifierType']">
       <inheritance:implements>com.helger.peppol.identifier.generic.doctype.IMutableDocumentTypeIdentifier</inheritance:implements>
     </bindings> 
-    <bindings node="//xs:complexType[@name='ProcessIdentifierType']">
+    <bindings node="//xsd:complexType[@name='ProcessIdentifierType']">
       <inheritance:implements>com.helger.peppol.identifier.generic.process.IMutableProcessIdentifier</inheritance:implements>
     </bindings>
     --> 

@@ -18,10 +18,16 @@
 -->
 <bindings version="2.1" 
           xmlns="http://java.sun.com/xml/ns/jaxb"
-          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
           xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
-  <globalBindings fixedAttributeAsConstantProperty="true" typesafeEnumMaxMembers="32000" />
+  <globalBindings fixedAttributeAsConstantProperty="true" typesafeEnumMaxMembers="32000">
+    <xjc:javaType name="java.time.LocalDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterLocalDateTime" />
+    <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterLocalDate" />
+    <xjc:javaType name="java.time.LocalTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterLocalTime" />
+    <xjc:javaType name="java.time.Duration" xmlType="xsd:duration" adapter="com.helger.jaxb.adapter.AdapterDuration" />
+  </globalBindings>
   <bindings schemaLocation="../resources/schemas/ServiceGroup-2.0.xsd">
     <schemaBindings>
       <package name="com.helger.xsds.bdxr.smp2" />
@@ -42,10 +48,10 @@
       <package name="com.helger.xsds.bdxr.smp2.bc" />
     </schemaBindings>
     <!-- 
-    <bindings node="//xs:complexType[@name='ParticipantIDType']">
+    <bindings node="//xsd:complexType[@name='ParticipantIDType']">
       <inheritance:implements>com.helger.peppol.identifier.generic.participant.IMutableParticipantIdentifier</inheritance:implements>
     </bindings> 
-    <bindings node="//xs:complexType[@name='IDType']">
+    <bindings node="//xsd:complexType[@name='IDType']">
       <inheritance:implements>com.helger.peppol.identifier.IMutableIdentifier</inheritance:implements>
     </bindings>
      --> 
