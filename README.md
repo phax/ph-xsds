@@ -46,6 +46,7 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 * v2.4.0 - work in progress
     * Updated to ph-commons 9.4.7
+    * Using Java 8 date and time classes for JAXB created classes
 * v2.3.0 - 2020-05-26
     * Changed the "groupId" of the Maven artefacts to `com.helger.xsd`
 * v2.2.6 - 2020-05-11
