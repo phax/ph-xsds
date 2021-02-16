@@ -44,6 +44,8 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.4.2 - 2021-02-16
+    * Removed dependencies for ph-xmldsig and related - no longer depends on JAXB implementation
 * v2.4.1 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
 * v2.4.0 - 2020-08-28
