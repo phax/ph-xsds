@@ -56,8 +56,21 @@
   <dependencies>
     <dependency>
       <groupId>com.helger</groupId>
+      <artifactId>ph-commons</artifactId>
+    </dependency>
+    
+    <!-- Just ph-commons is too little, because for Java 9+ the JAXB stuff and activation stuff is in separate modules -->
+    <dependency>
+      <groupId>com.helger</groupId>
       <artifactId>ph-jaxb-pom</artifactId>
       <type>pom</type>
+      <exclusions>
+        <!-- We only need the JAXB API, but not the implementation -->
+        <exclusion>
+          <groupId>com.sun.xml.bind</groupId>
+          <artifactId>jaxb-impl</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   
