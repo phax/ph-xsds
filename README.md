@@ -44,6 +44,8 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.4.3 - work in progress
+    * Changed the JAXB binding for `xs:dateTime` to `java.time.OffsetDateTime`
 * v2.4.2 - 2021-02-16
     * Removed dependencies for ph-xmldsig and related - no longer depends on JAXB implementation
 * v2.4.1 - 2020-09-17
