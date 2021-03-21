@@ -22,7 +22,7 @@ Currently contained XSDs are:
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact as a BOM (replacing `x.y.z` with the real version number):
+Add the following to your pom.xml to use this artifact as a BOM, replacing `x.y.z` with the effective version number:
 
 ```xml
 <dependency>
@@ -44,8 +44,9 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
-* v2.4.4 - work in progress
+* v2.5.0 - 2021-03-21
     * Updated to ph-commons 10
+    * Changed the JAXB binding to `Offset*` classes
 * v2.4.3 - 2021-03-18
     * Updated to ph-commons 9.5.5
     * Changed the JAXB binding for `xs:dateTime` to `java.time.OffsetDateTime`
