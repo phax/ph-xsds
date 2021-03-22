@@ -96,7 +96,6 @@
           <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
           <extension>true</extension>
           <strict>false</strict>
-          <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
           <args>
             <arg>-no-header</arg>
             <arg>-Xph-default-locale</arg>
