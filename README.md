@@ -44,6 +44,9 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
+* v2.6.0 - 2021-05-02
+    * Updated to ph-commons 10.1
+    * Changed the JAXB binding to `XMLOffset*` classes
 * v2.5.0 - 2021-03-21
     * Updated to ph-commons 10
     * Changed the JAXB binding to `Offset*` classes
