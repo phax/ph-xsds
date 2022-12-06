@@ -63,6 +63,9 @@
   </developers>
   
   <properties>
+    <jaxb-plugin.group>com.evolvedbinary.maven.jvnet</jaxb-plugin.group>
+    <jaxb-plugin.artifact>jaxb40-maven-plugin</jaxb-plugin.artifact>
+    <jaxb-plugin.version>0.16.0-SNAPSHOT</jaxb-plugin.version>
     <ph-jaxb-plugin.version>4.0.0</ph-jaxb-plugin.version>
   </properties>
   
@@ -173,5 +176,14 @@
   </modules>
 
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.helger.maven</groupId>
+          <artifactId>ph-buildinfo-maven-plugin</artifactId>
+          <version>4.0.0-SNAPSHOT</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>

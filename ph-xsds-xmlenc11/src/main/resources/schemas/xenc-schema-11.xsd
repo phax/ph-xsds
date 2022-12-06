@@ -14,6 +14,7 @@
 #
 -->
 
+<!--
 <!DOCTYPE schema  PUBLIC "-//W3C//DTD XMLSchema 200102//EN"
  "http://www.w3.org/2001/XMLSchema.dtd"
  [
@@ -25,6 +26,7 @@
 	<!ENTITY % p ''>
 	<!ENTITY % s ''>
 ]>
+-->
 
 <schema xmlns='http://www.w3.org/2001/XMLSchema' version='1.0'
         xmlns:xenc='http://www.w3.org/2001/04/xmlenc#'
