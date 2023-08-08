@@ -1,6 +1,8 @@
 # ph-xsds
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f026db5f326450e8f1726f1160a9085)](https://www.codacy.com/app/philip/ph-xsds?utm_source=github.com&utm_medium=referral&utm_content=phax/ph-xsds&utm_campaign=badger)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger.xsd/ph-xsds-parent-pom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger.xsd/ph-xsds-parent-pom) 
+[![javadoc](https://javadoc.io/badge2/com.helger.xsd/ph-xsds-parent-pom/javadoc.svg)](https://javadoc.io/doc/com.helger.xsd/ph-xsds-parent-pom)
+[![CodeCov](https://codecov.io/gh/phax/ph-xsds/branch/master/graph/badge.svg)](https://codecov.io/gh/phax/ph-xsds)
 
 Prebuild JAXB based XSDs referenced in multiple projects.
 The projects contained in here are meant to be reusable JAXB objects.
