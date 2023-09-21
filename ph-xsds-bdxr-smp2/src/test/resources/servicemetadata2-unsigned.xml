@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ServiceMetadata xmlns="http://docs.oasis-open.org/bdxr/ns/SMP/2/ServiceMetadata"
+  xmlns:ext="http://docs.oasis-open.org/bdxr/ns/SMP/2/ExtensionComponents"
+  xmlns:sma="http://docs.oasis-open.org/bdxr/ns/SMP/2/AggregateComponents"
+  xmlns:smb="http://docs.oasis-open.org/bdxr/ns/SMP/2/BasicComponents">
+  <smb:SMPVersionID>2.0</smb:SMPVersionID>
+  <smb:ID schemeID="busdox-docid-qns">urn:oasis:names:specification:ubl:schema:xsd:Invoice-2::Invoice##BPC-UBL-2.2</smb:ID>
+  <smb:ParticipantID schemeID="iso6523-actorid-upis">0088:123456789</smb:ParticipantID>
+  <sma:ProcessMetadata>
+    <sma:Process>
+      <smb:ID schemeID="cenbii-procid-ubl">test:poc:01</smb:ID>
+    </sma:Process>
+    <sma:Endpoint>
+      <smb:TransportProfileID>bpc-ebms3-as4-v1p0</smb:TransportProfileID>
+      <smb:Description>AS4 access point for the BPC proof of concept</smb:Description>
+      <smb:Contact>bdxhub@gmail.com</smb:Contact>
+      <smb:AddressURI>https://bpc-as4.bdxhub.com</smb:AddressURI>
+      <smb:ActivationDate>2020-07-01</smb:ActivationDate>
+      <smb:ExpirationDate>2022-06-30</smb:ExpirationDate>
+      <sma:Certificate>
+        <smb:TypeCode>X.509</smb:TypeCode>
+        <smb:Description>BPC POC AP certificate issued by Dennis</smb:Description>
+        <smb:ContentBinaryObject mimeCode="application/base64">Zm9v</smb:ContentBinaryObject>
+      </sma:Certificate>
+    </sma:Endpoint>
+  </sma:ProcessMetadata>
+  <sma:ProcessMetadata>
+    <sma:Process>
+      <smb:ID schemeID="cenbii-procid-ubl">test:poc:02</smb:ID>
+    </sma:Process>
+    <sma:Endpoint>
+      <smb:TransportProfileID>bpc-ebms3-as4-v1p0</smb:TransportProfileID>
+      <smb:Description>AS4 access point for the BPC proof of concept</smb:Description>
+      <smb:Contact>bdxhub@gmail.com</smb:Contact>
+      <smb:AddressURI>https://bpc-as4.bdxhub.com</smb:AddressURI>
+      <smb:ActivationDate>2020-07-01</smb:ActivationDate>
+      <smb:ExpirationDate>2022-06-30</smb:ExpirationDate>
+      <sma:Certificate>
+        <smb:TypeCode>X.509</smb:TypeCode>
+        <smb:Description>BPC POC AP certificate issued by Dennis</smb:Description>
+        <smb:ContentBinaryObject mimeCode="application/base64">Zm9v</smb:ContentBinaryObject>
+      </sma:Certificate>
+    </sma:Endpoint>
+  </sma:ProcessMetadata>
+</ServiceMetadata>

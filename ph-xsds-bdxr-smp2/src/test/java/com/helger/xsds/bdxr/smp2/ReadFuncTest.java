@@ -29,10 +29,15 @@ public final class ReadFuncTest
   @Test
   public void testReadServiceMetadata ()
   {
-    final File aXML = new File ("src/test/resources/servicemetadata1.xml");
-    final ServiceMetadataType aSG = new GenericJAXBMarshaller <> (ServiceMetadataType.class,
-                                                                  CBDXRSMP2.getAllXSDResourceServiceMetadata (),
-                                                                  new ObjectFactory ()::createServiceMetadata).read (aXML);
-    assertNotNull (aSG);
+    for (final String sName : new String [] { "servicemetadata1.xml",
+                                              "servicemetadata2-unsigned.xml",
+                                              "servicemetadata3-unsigned.xml" })
+    {
+      final File aXML = new File ("src/test/resources/" + sName);
+      final ServiceMetadataType aSG = new GenericJAXBMarshaller <> (ServiceMetadataType.class,
+                                                                    CBDXRSMP2.getAllXSDResourceServiceMetadata (),
+                                                                    new ObjectFactory ()::createServiceMetadata).read (aXML);
+      assertNotNull ("Failed to read " + sName, aSG);
+    }
   }
 }
