@@ -54,10 +54,13 @@
   </developers>
   
   <dependencies>
-    <!-- Just ph-commons is too little, because for Java 9+ the JAXB stuff and activation stuff is in separate modules -->
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-jaxb-adapter</artifactId>
     </dependency>
   </dependencies>
   

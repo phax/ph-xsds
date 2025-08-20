@@ -62,6 +62,10 @@
       <groupId>com.helger.xsd</groupId>
       <artifactId>ph-xsds-xml</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger.commons</groupId>
+      <artifactId>ph-jaxb-adapter</artifactId>
+    </dependency>
     
     <!-- For XMLSchemaCache -->
     <dependency>
