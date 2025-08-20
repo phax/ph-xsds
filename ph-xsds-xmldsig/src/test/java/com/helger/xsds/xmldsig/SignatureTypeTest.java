@@ -14,10 +14,22 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.helger.collection.commons.CommonsArrayList;
+import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.unittest.support.TestHelper;
 
 public final class SignatureTypeTest
 {
+  private static class Marshaller extends GenericJAXBMarshaller <SignatureType>
+  {
+    public Marshaller ()
+    {
+      super (SignatureType.class,
+             new CommonsArrayList <> (CXMLDSig.getXSDResource ()),
+             new ObjectFactory ()::createSignature);
+    }
+  }
+
   @Test
   public void testDefaultConstructor ()
   {
@@ -254,5 +266,19 @@ public final class SignatureTypeTest
     assertEquals (source.getId (), target.getId ());
     assertEquals (source.getObjectCount (), target.getObjectCount ());
     assertNotSame (source.getObject (), target.getObject ());
+  }
+
+  @Test
+  public void testRead ()
+  {
+    final String s = "<dsig:Signature Id=\"signature-1-1\" xmlns:dsig=\"http://www.w3.org/2000/09/xmldsig#\"><dsig:SignedInfo><dsig:CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><dsig:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256\" /><dsig:Reference Id=\"reference-1-1\" URI=\"\"><dsig:Transforms><dsig:Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /></dsig:Transforms><dsig:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\" /><dsig:DigestValue>8my/qIp2RKQVIE4UerdnmPIkUtbhYpRUt76PdCqMLfM=</dsig:DigestValue></dsig:Reference><dsig:Reference Id=\"etsi-data-reference-1-1\" Type=\"http://uri.etsi.org/01903/v1.1.1#SignedProperties\" URI=\"\"><dsig:Transforms><dsig:Transform Algorithm=\"http://www.w3.org/2002/06/xmldsig-filter2\"><xpf:XPath Filter=\"intersect\" xmlns:etsi=\"http://uri.etsi.org/01903/v1.1.1#\" xmlns:xpf=\"http://www.w3.org/2002/06/xmldsig-filter2\">//*[@Id='etsi-signed-1-1']/etsi:QualifyingProperties/etsi:SignedProperties</xpf:XPath></dsig:Transform></dsig:Transforms><dsig:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\" /><dsig:DigestValue>ME9JaROX8qIm8BUfxsiaXL+iaTh4tuI2+il/dKUW4uc=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue>jKzVMbmJQzU3RWtxNUP9MSxbRt1NRmCbEbGxCUUWgqUuH6QeVF8QSNr2zgNcq/bOa11b1sQAAP8E8RsIJiZ3mQ==</dsig:SignatureValue><dsig:KeyInfo><dsig:X509Data><dsig:X509Certificate>MIIEnjCCA4agAwIBAgIDCFB9MA0GCSqGSIb3DQEBBQUAMIGdMQswCQYDVQQGEwJBVDFIMEYGA1UECgw/QS1UcnVzdCBHZXMuIGYuIFNpY2hlcmhlaXRzc3lzdGVtZSBpbSBlbGVrdHIuIERhdGVudmVya2VociBHbWJIMSEwHwYDVQQLDBhhLXNpZ24tcHJlbWl1bS1tb2JpbGUtMDMxITAfBgNVBAMMGGEtc2lnbi1wcmVtaXVtLW1vYmlsZS0wMzAeFw0xMDEyMjIxMTM3NTNaFw0xNTEyMjIxMTM3NTNaMFoxCzAJBgNVBAYTAkFUMRQwEgYDVQQDDAtKb3NlZiBCb2dhZDEOMAwGA1UEBAwFQm9nYWQxDjAMBgNVBCoMBUpvc2VmMRUwEwYDVQQFEww3MTI0MDUxNjk1MDkwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATMtoznQ8NUL5OApYePUTDhktQcUXxfsHHR/A8Sx6XpdbGKRFLF4nO3KnAssrlN6erTPaSQsc+SfXC8xzWD0RTGo4IB8jCCAe4wEwYDVR0jBAwwCoAIS7hh11/WSGMwJwYIKwYBBQUHAQMBAf8EGDAWMAgGBgQAjkYBATAKBggrBgEFBQcLATB+BggrBgEFBQcBAQRyMHAwRQYIKwYBBQUHMAKGOWh0dHA6Ly93d3cuYS10cnVzdC5hdC9jZXJ0cy9hLXNpZ24tcHJlbWl1bS1tb2JpbGUtMDNhLmNydDAnBggrBgEFBQcwAYYbaHR0cDovL29jc3AuYS10cnVzdC5hdC9vY3NwMGAGA1UdIARZMFcwSwYGKigAEQEUMEEwPwYIKwYBBQUHAgEWM2h0dHA6Ly93d3cuYS10cnVzdC5hdC9kb2NzL2NwL2Etc2lnbi1wcmVtaXVtLW1vYmlsZTAIBgYEAIswAQEwgZ0GA1UdHwSBlTCBkjCBj6CBjKCBiYaBhmxkYXA6Ly9sZGFwLmEtdHJ1c3QuYXQvb3U9YS1zaWduLXByZW1pdW0tbW9iaWxlLTAzLG89QS1UcnVzdCxjPUFUP2NlcnRpZmljYXRlcmV2b2NhdGlvbmxpc3Q/YmFzZT9vYmplY3RjbGFzcz1laWRDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MBEGA1UdDgQKBAhCauHetOTWqDAOBgNVHQ8BAf8EBAMCBsAwCQYDVR0TBAIwADANBgkqhkiG9w0BAQUFAAOCAQEAm2NYiJMygvQFGwFtzS7/+ch2qv+3smCizJrshiB33ETmjRIdqqRcACDAJ/yizP2P/eIoLclPOqrMjLJmwFBwvkZw3MdBKQ4x07kT5enQvx4zYsTtZA3VUw6+KCnpVSj+mrvw3mEwTEGVfkQTZLAIl0uz8kjtiFTGfUUEKmBTztut71L0GRS8iw1RTxUM6DKeJA3OmAmU+ytvuemCXn1qWQACVn5oMOxprgvOJw4qIU/y+nIp4dzXYjzEG9U5waZgGm68F/KcWnYNNNhq1sYd2NDvtCLgjdLEPeZBwbwJQXo037IGLiXPXu0JPXISXnGLyPaRXEGfFMYJKNGOLnahSw==</dsig:X509Certificate></dsig:X509Data><dsig:KeyName>SERIALNUMBER=712405169509, G=Josef, SN=Bogad, CN=Josef Bogad, C=AT</dsig:KeyName></dsig:KeyInfo><dsig:Object Id=\"etsi-signed-1-1\"><etsi:QualifyingProperties Target=\"#signature-1-1\" xmlns:etsi=\"http://uri.etsi.org/01903/v1.1.1#\"><etsi:SignedProperties><etsi:SignedSignatureProperties><etsi:SigningTime>2012-03-12T11:01:14Z</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><etsi:DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><etsi:DigestValue>yexQhxCAH1rgoZ0uCc1+d8ylaH4=</etsi:DigestValue></etsi:CertDigest><etsi:IssuerSerial><dsig:X509IssuerName>CN=a-sign-premium-mobile-03,OU=a-sign-premium-mobile-03,O=A-Trust Ges. f. Sicherheitssysteme im elektr. Datenverkehr GmbH,C=AT</dsig:X509IssuerName><dsig:X509SerialNumber>544893</dsig:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate><etsi:SignaturePolicyIdentifier><etsi:SignaturePolicyImplied /></etsi:SignaturePolicyIdentifier></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference=\"#reference-1-1\"><etsi:MimeType>text/html</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></dsig:Object></dsig:Signature>";
+    final SignatureType aSig = new Marshaller ().read (s);
+    assertNotNull (aSig);
+
+    final SignatureType aSig2 = aSig.clone ();
+    TestHelper.testDefaultImplementationWithEqualContentObject (aSig, aSig2);
+
+    aSig2.setId (aSig2.getId () + "x");
+    TestHelper.testDefaultImplementationWithDifferentContentObject (aSig, aSig2);
   }
 }
