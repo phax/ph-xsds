@@ -25,8 +25,8 @@ import javax.xml.validation.Schema;
 
 import org.junit.Test;
 
-import com.helger.commons.collection.impl.ICommonsList;
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.collection.commons.ICommonsList;
+import com.helger.io.resource.ClassPathResource;
 import com.helger.xml.schema.XMLSchemaCache;
 
 /**

@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger.xsd</groupId>
     <artifactId>ph-xsds-parent-pom</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>4.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>ph-xsds-xmlenc</artifactId>
   <packaging>bundle</packaging>

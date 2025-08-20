@@ -16,11 +16,12 @@
  */
 package com.helger.xsds.xml;
 
-import javax.annotation.Nonnull;
-import javax.annotation.concurrent.Immutable;
 import javax.xml.XMLConstants;
 
-import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.annotation.concurrent.Immutable;
+import com.helger.io.resource.ClassPathResource;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
