@@ -22,7 +22,7 @@
   <parent>
     <groupId>com.helger.xsd</groupId>
     <artifactId>ph-xsds-parent-pom</artifactId>
-    <version>4.0.0</version>
+    <version>4.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-xsds-bdxr-smp1</artifactId>
   <packaging>bundle</packaging>
