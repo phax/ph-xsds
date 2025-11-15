@@ -16,10 +16,10 @@
  */
 package com.helger.xsds.xmldsig;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -35,7 +35,7 @@ public final class CXMLDSig
   private CXMLDSig ()
   {}
 
-  @Nonnull
+  @NonNull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/xmldsig-core-schema.xsd", CXMLDSig.class.getClassLoader ());

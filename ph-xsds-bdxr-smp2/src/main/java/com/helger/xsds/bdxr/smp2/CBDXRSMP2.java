@@ -16,6 +16,8 @@
  */
 package com.helger.xsds.bdxr.smp2;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -25,8 +27,6 @@ import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -60,35 +60,35 @@ public final class CBDXRSMP2
   private CBDXRSMP2 ()
   {}
 
-  @Nonnull
+  @NonNull
   private static ClassLoader _getCL ()
   {
     return CBDXRSMP2.class.getClassLoader ();
   }
 
   // Note: requires CCTS Schema Module
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceUnqualifiedDataTypes ()
   {
     return new ClassPathResource ("/schemas/common/SMP-UnqualifiedDataTypes-2.0.xsd", _getCL ());
   }
 
   // Note: requires UnqualifiedDataTypes
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceQualifiedDataTypes ()
   {
     return new ClassPathResource ("/schemas/common/SMP-QualifiedDataTypes-2.0.xsd", _getCL ());
   }
 
   // Note: requires QualifiedDataTypes, UnqualifiedDataTypes
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceBasicComponents ()
   {
     return new ClassPathResource ("/schemas/common/SMP-BasicComponents-2.0.xsd", _getCL ());
   }
 
   // Note: requires Xades 1.3.2, Xades 1.4.1
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceExtensionContentDataType ()
   {
     return new ClassPathResource ("/schemas/common/SMP-ExtensionContentDataType-2.0.xsd", _getCL ());
@@ -96,20 +96,20 @@ public final class CBDXRSMP2
 
   // Note: requires UnqualifiedDataTypes, BasicComponents,
   // ExtensionContentDataType
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceExtensionComponents ()
   {
     return new ClassPathResource ("/schemas/common/SMP-ExtensionComponents-2.0.xsd", _getCL ());
   }
 
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourcePayloadContentDataType ()
   {
     return new ClassPathResource ("/schemas/common/SMP-PayloadContentDataType-2.0.xsd", _getCL ());
   }
 
   // Note: requires BasicComponents, ExtensionComponents, PayloadContentDataType
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceAggregateComponents ()
   {
     return new ClassPathResource ("/schemas/common/SMP-AggregateComponents-2.0.xsd", _getCL ());
@@ -119,7 +119,7 @@ public final class CBDXRSMP2
    * @return A list of all includes in the correct order. Never
    *         <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
@@ -136,13 +136,13 @@ public final class CBDXRSMP2
 
   // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
   // XMLDsig
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceServiceGroup ()
   {
     return new ClassPathResource ("/schemas/ServiceGroup-2.0.xsd", _getCL ());
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDResourceServiceGroup ()
   {
@@ -153,13 +153,13 @@ public final class CBDXRSMP2
 
   // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
   // XMLDsig
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceServiceMetadata ()
   {
     return new ClassPathResource ("/schemas/ServiceMetadata-2.0.xsd", _getCL ());
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDResourceServiceMetadata ()
   {

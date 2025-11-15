@@ -18,10 +18,10 @@ package com.helger.xsds.xml;
 
 import javax.xml.XMLConstants;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -37,7 +37,7 @@ public final class CXML_XSD
   private CXML_XSD ()
   {}
 
-  @Nonnull
+  @NonNull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/xml.xsd", CXML_XSD.class.getClassLoader ());

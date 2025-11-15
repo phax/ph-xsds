@@ -10,14 +10,14 @@ You can use the artefacts as episodes in your projects and therefore reduced cod
 
 Currently contained XSDs are:
 * XMLDSig 1.0
-* XMLDSig 1.1 (builds on XMLDSig 1.0)
-* XAdES 1.3.2 (builds on XMLDSig 1.0) 
-* XAdES 1.4.1 (builds on XMLDSig 1.0 and XAdES 1.3.2)
+* XMLDSig 1.1 (requires XMLDSig 1.0)
+* XAdES 1.3.2 (requires XMLDSig 1.0) 
+* XAdES 1.4.1 (requires XMLDSig 1.0 and XAdES 1.3.2)
 * CCTS CCT SchemaModule
-* OASIS BDXR SMP v1 (builds on XMLDSig 1.0) (since v2.2.0)
-* OASIS BDXR SMP v2 CS01 (builds on XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
-* XML Encryption Core (builds on XMLDSig 1.0) (since v2.2.4)
-* XML Encryption 1.1 (builds on XMLDSig 1.0 and XML Encryption Core) (since v2.2.4)
+* OASIS BDXR SMP v1 (requires XMLDSig 1.0) (since v2.2.0)
+* OASIS BDXR SMP v2 (requires XMLDSig 1.0, XAdES 1.3.2, XAdES 1.4.1 and CCTS CCT SchemaModule) (since v2.2.0)
+* XML Encryption Core (requires XMLDSig 1.0) (since v2.2.4)
+* XML Encryption 1.1 (requires XMLDSig 1.0 and XML Encryption Core) (since v2.2.4)
 * XML.xsd 2009-01 (since v2.2.5)
 * XLink (build on XML.xsd) (since v2.2.5)
 * Web Services Addressing 1.0 (since v2.2.6)
@@ -45,6 +45,10 @@ This project relies on JDK version based Maven profile activation.
 See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 # News and noteworthy
+
+v4.1.0 - 2025-11-16
+* Updated to ph-commons 12.1.0
+* Using JSpecify annotations
 
 v4.0.0 - 2025-08-24
 * Requires Java 17 as the minimum version

@@ -16,14 +16,14 @@
  */
 package com.helger.xsds.xmldsig11;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
 import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -43,7 +43,7 @@ public final class CXMLDSig11
    * @return A list of all includes in the correct order. Never
    *         <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
@@ -51,13 +51,13 @@ public final class CXMLDSig11
   }
 
   // Note: requires XMLDSig 1.0 schema
-  @Nonnull
+  @NonNull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/xmldsig11-schema.xsd", CXMLDSig11.class.getClassLoader ());
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDResources ()
   {

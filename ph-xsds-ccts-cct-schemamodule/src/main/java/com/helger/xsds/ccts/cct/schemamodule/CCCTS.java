@@ -16,10 +16,10 @@
  */
 package com.helger.xsds.ccts.cct.schemamodule;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.io.resource.ClassPathResource;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -36,7 +36,7 @@ public final class CCCTS
   {}
 
   // No includes needed
-  @Nonnull
+  @NonNull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/CCTS_CCT_SchemaModule.xsd", CCCTS.class.getClassLoader ());

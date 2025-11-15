@@ -16,6 +16,8 @@
  */
 package com.helger.xsds.xades141;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.ReturnsMutableCopy;
 import com.helger.collection.commons.CommonsArrayList;
@@ -23,8 +25,6 @@ import com.helger.collection.commons.ICommonsList;
 import com.helger.io.resource.ClassPathResource;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Utility class for this schema module
@@ -44,7 +44,7 @@ public final class CXAdES141
    * @return A list of all includes in the correct order. Never
    *         <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
@@ -52,13 +52,13 @@ public final class CXAdES141
   }
 
   // Note: requires XMLDSig 1.0 schema and XAdES 1.3.2
-  @Nonnull
+  @NonNull
   public static final ClassPathResource getXSDResource ()
   {
     return new ClassPathResource ("/schemas/XAdES01903v141-201601.xsd", CXAdES141.class.getClassLoader ());
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDResources ()
   {
