@@ -25,7 +25,7 @@
     <version>4.1.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-xsds-bdxr-smp2</artifactId>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-xsds-bdxr-smp2</name>
   <description>OASIS BDXR SMP v1 wrapped in JAXB</description>
   <url>https://github.com/phax/ph-xsds/ph-xsds-bdxr-smp2</url>
@@ -37,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>philip</id>
@@ -51,13 +49,11 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencies>
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.helger.xsd</groupId>
       <artifactId>ph-xsds-xmldsig</artifactId>
@@ -78,7 +74,6 @@
       <groupId>com.helger.xsd</groupId>
       <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-jaxb</artifactId>
@@ -90,20 +85,8 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.xsds.bdxr.smp2</Automatic-Module-Name>
-            <Export-Package>com.helger.xsds.bdxr.smp2.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>

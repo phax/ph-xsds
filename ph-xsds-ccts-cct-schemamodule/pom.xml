@@ -25,12 +25,11 @@
     <version>4.1.1-SNAPSHOT</version>
   </parent>
   <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>ph-xsds-ccts-cct-schemamodule</name>
   <description>CCTS CCT SchemaModule wrapped in JAXB</description>
   <url>https://github.com/phax/ph-xsds/ph-xsds-ccts-cct-schemamodule</url>
   <inceptionYear>2016</inceptionYear>
-
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -38,12 +37,10 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <organization>
     <name>Philip Helger</name>
     <url>http://www.helger.com</url>
   </organization>
-
   <developers>
     <developer>
       <id>philip</id>
@@ -52,33 +49,19 @@
       <url>http://www.helger.com</url>
     </developer>
   </developers>
-
   <dependencies>
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.helger.commons</groupId>
       <artifactId>ph-xml</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <configuration>
-          <instructions>
-            <Automatic-Module-Name>com.helger.xsds.ccts.cct.schemamodule</Automatic-Module-Name>
-            <Export-Package>com.helger.xsds.ccts.cct.schemamodule.*</Export-Package>
-            <Import-Package>!org.jspecify.annotations.*,*</Import-Package>
-          </instructions>
-        </configuration>
-      </plugin>
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
