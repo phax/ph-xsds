@@ -41,8 +41,7 @@ public final class CXAdES141
   {}
 
   /**
-   * @return A list of all includes in the correct order. Never
-   *         <code>null</code>.
+   * @return A list of all includes in the correct order. Never <code>null</code>.
    */
   @NonNull
   @ReturnsMutableCopy
