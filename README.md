@@ -49,7 +49,8 @@ See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific i
 
 # News and noteworthy
 
-v4.1.1 - work in progress
+v4.1.1 - 2026-10-09
+* Updated to ph-commons 12.5.0
 * Removed OSGI bundling
 
 v4.1.0 - 2025-11-16
