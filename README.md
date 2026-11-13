@@ -27,17 +27,23 @@ Currently contained XSDs are:
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact as a BOM, replacing `x.y.z` with the effective version number:
+Add the following to your pom.xml to import the BOM, replacing `x.y.z` with the effective version number:
 
 ```xml
-<dependency>
-  <groupId>com.helger.xsd</groupId>
-  <artifactId>ph-xsds-parent-pom</artifactId>
-  <version>x.y.z</version>
-  <type>pom</type>
-  <scope>import</scope>
-</dependency>
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.helger.xsd</groupId>
+      <artifactId>ph-xsds-bom</artifactId>
+      <version>x.y.z</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
 ```
+
+Note: prior to v4.1.2 the BOM was `ph-xsds-parent-pom`, which also carries the build configuration of this project.
 
 Note: prior to v2.3.0 the Maven groupId was `com.helger`.
 
@@ -48,6 +54,10 @@ This project relies on JDK version based Maven profile activation.
 See https://github.com/phax/ph-jaxb-pom#gradle-usage for help on this specific issue. 
 
 # News and noteworthy
+
+v4.1.2 - 2026-11-13
+* New module `ph-xsds-bom` - a dedicated Bill of Materials with the managed versions of all ph-xsds artefacts.
+  Import it instead of `ph-xsds-parent-pom`, which also carries the build configuration of this project.
 
 v4.1.1 - 2026-10-09
 * Updated to ph-commons 12.5.0
